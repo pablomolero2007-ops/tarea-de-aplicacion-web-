@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo de coches modernos con listado y formulario para añadir nuevos vehículos">
+    <title>Catálogo de Coches</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <h1 class="logo">AutoTracker</h1>
+            <ul class="nav-links">
+                <li><a href="#listado" class="active">Listado</a></li>
+                <li><a href="#nuevo">Añadir Coche</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Dashboard Header -->
+        <header class="dashboard-header">
+            <h2>Gestión de Vehículos</h2>
+            <p>Visualiza y añade nuevos coches al catálogo.</p>
+        </header>
+
+        <!-- Section: Listado de Coches -->
+        <section id="listado" class="card">
+            <div class="card-header">
+                <h3>Coches Registrados</h3>
+            </div>
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Marca</th>
+                            <th>Modelo</th>
+                            <th>Año</th>
+                            <th>Color</th>
+                            <th>Precio</th>
+                            <th>País de Origen</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Ejemplo 1 -->
+                        <tr>
+                            <td>Mustang GT</td>
+                            <td>Ford</td>
+                            <td>Fastback</td>
+                            <td>2024</td>
+                            <td><span class="color-badge" style="background-color: #dc2626;"></span> Rojo</td>
+                            <td>$55,000</td>
+                            <td>Estados Unidos</td>
+                            <td>
+                                <button class="btn btn-icon" title="Editar">✏️</button>
+                                <button class="btn btn-icon btn-danger" title="Eliminar">🗑️</button>
+                            </td>
+                        </tr>
+                        <!-- Ejemplo 2 -->
+                        <tr>
+                            <td>911 Carrera</td>
+                            <td>Porsche</td>
+                            <td>992</td>
+                            <td>2023</td>
+                            <td><span class="color-badge" style="background-color: #2563eb;"></span> Azul</td>
+                            <td>$114,400</td>
+                            <td>Alemania</td>
+                            <td>
+                                <button class="btn btn-icon" title="Editar">✏️</button>
+                                <button class="btn btn-icon btn-danger" title="Eliminar">🗑️</button>
+                            </td>
+                        </tr>
+                        <!-- Ejemplo 3 -->
+                        <tr>
+                            <td>Civic Type R</td>
+                            <td>Honda</td>
+                            <td>Hatchback</td>
+                            <td>2024</td>
+                            <td><span class="color-badge" style="background-color: #f8fafc; border: 1px solid #cbd5e1;"></span> Blanco</td>
+                            <td>$44,795</td>
+                            <td>Japón</td>
+                            <td>
+                                <button class="btn btn-icon" title="Editar">✏️</button>
+                                <button class="btn btn-icon btn-danger" title="Eliminar">🗑️</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section: Formulario -->
+        <section id="nuevo" class="card mt-8">
+            <div class="card-header">
+                <h3>Añadir Nuevo Coche</h3>
+                <p>Completa el formulario para registrar un nuevo vehículo en el sistema.</p>
+            </div>
+            <form class="car-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Mustang GT" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="marca">Marca</label>
+                        <input type="text" id="marca" name="marca" placeholder="Ej. Ford" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="modelo">Modelo</label>
+                        <input type="text" id="modelo" name="modelo" placeholder="Ej. Fastback" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="anio">Año</label>
+                        <input type="number" id="anio" name="anio" min="1886" max="2100" placeholder="Ej. 2024" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="color">Color</label>
+                        <input type="text" id="color" name="color" placeholder="Ej. Rojo Pasión" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="precio">Precio ($)</label>
+                        <input type="number" id="precio" name="precio" placeholder="Ej. 55000" min="0" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="pais">País de Origen</label>
+                        <select id="pais" name="pais" required>
+                            <option value="">Selecciona un país...</option>
+                            <option value="Alemania">Alemania</option>
+                            <option value="Corea del Sur">Corea del Sur</option>
+                            <option value="Estados Unidos">Estados Unidos</option>
+                            <option value="Francia">Francia</option>
+                            <option value="Italia">Italia</option>
+                            <option value="Japón">Japón</option>
+                            <option value="Reino Unido">Reino Unido</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="reset" class="btn btn-secondary">Limpiar</button>
+                    <button type="submit" class="btn btn-primary">Registrar Coche</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>
