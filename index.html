@@ -26,74 +26,91 @@
             <p>Visualiza y añade nuevos coches al catálogo.</p>
         </header>
 
-        <!-- Section: Listado de Coches -->
-        <section id="listado" class="card">
-            <div class="card-header">
+        <section id="listado" class="list-section">
+            <div class="section-header">
                 <h3>Coches Registrados</h3>
             </div>
-            <div class="table-responsive">
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Imagen</th>
-                            <th>Nombre</th>
-                            <th>Marca</th>
-                            <th>Modelo</th>
-                            <th>Año</th>
-                            <th>Color</th>
-                            <th>Precio</th>
-                            <th>País de Origen</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Ejemplo 1 -->
-                        <tr>
-                            <td><img src="img/ford_mustang.png" alt="Mustang GT" class="car-thumb"></td>
-                            <td>Mustang GT</td>
-                            <td>Ford</td>
-                            <td>Fastback</td>
-                            <td>2024</td>
-                            <td><span class="color-badge" style="background-color: #dc2626;"></span> Rojo</td>
-                            <td>$55,000</td>
-                            <td>Estados Unidos</td>
-                            <td>
-                                <button class="btn btn-icon" title="Editar">✏️</button>
-                                <button class="btn btn-icon btn-danger" title="Eliminar">🗑️</button>
-                            </td>
-                        </tr>
-                        <!-- Ejemplo 2 -->
-                        <tr>
-                            <td><img src="img/porsche_911.png" alt="911 Carrera" class="car-thumb"></td>
-                            <td>911 Carrera</td>
-                            <td>Porsche</td>
-                            <td>992</td>
-                            <td>2023</td>
-                            <td><span class="color-badge" style="background-color: #2563eb;"></span> Azul</td>
-                            <td>$114,400</td>
-                            <td>Alemania</td>
-                            <td>
-                                <button class="btn btn-icon" title="Editar">✏️</button>
-                                <button class="btn btn-icon btn-danger" title="Eliminar">🗑️</button>
-                            </td>
-                        </tr>
-                        <!-- Ejemplo 3 -->
-                        <tr>
-                            <td><img src="img/honda_civic.png" alt="Civic Type R" class="car-thumb"></td>
-                            <td>Civic Type R</td>
-                            <td>Honda</td>
-                            <td>Hatchback</td>
-                            <td>2024</td>
-                            <td><span class="color-badge" style="background-color: #f8fafc; border: 1px solid #cbd5e1;"></span> Blanco</td>
-                            <td>$44,795</td>
-                            <td>Japón</td>
-                            <td>
-                                <button class="btn btn-icon" title="Editar">✏️</button>
-                                <button class="btn btn-icon btn-danger" title="Eliminar">🗑️</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="car-grid">
+                <!-- Coche 1 -->
+                <article class="car-card">
+                    <div class="car-card-img">
+                        <img src="img/ford_mustang.png" alt="Mustang GT">
+                    </div>
+                    <div class="car-card-content">
+                        <div class="car-card-header">
+                            <h4>Mustang GT</h4>
+                            <span class="car-tag">2024</span>
+                        </div>
+                        <div class="car-info">
+                            <p><strong>Marca:</strong> Ford</p>
+                            <p><strong>Modelo:</strong> Fastback</p>
+                            <p><strong>Precio:</strong> <span class="price">$55,000</span></p>
+                            <div class="color-info">
+                                <strong>Color:</strong>
+                                <span class="color-badge" style="background-color: #dc2626;"></span> Rojo
+                            </div>
+                            <p><strong>Origen:</strong> Estados Unidos</p>
+                        </div>
+                        <div class="car-card-actions">
+                            <button class="btn btn-secondary btn-sm" title="Editar">✏️ Editar</button>
+                            <button class="btn btn-danger btn-sm" title="Eliminar">🗑️ Eliminar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Coche 2 -->
+                <article class="car-card">
+                    <div class="car-card-img">
+                        <img src="img/porsche_911.png" alt="911 Carrera">
+                    </div>
+                    <div class="car-card-content">
+                        <div class="car-card-header">
+                            <h4>911 Carrera</h4>
+                            <span class="car-tag">2023</span>
+                        </div>
+                        <div class="car-info">
+                            <p><strong>Marca:</strong> Porsche</p>
+                            <p><strong>Modelo:</strong> 992</p>
+                            <p><strong>Precio:</strong> <span class="price">$114,400</span></p>
+                            <div class="color-info">
+                                <strong>Color:</strong>
+                                <span class="color-badge" style="background-color: #2563eb;"></span> Azul
+                            </div>
+                            <p><strong>Origen:</strong> Alemania</p>
+                        </div>
+                        <div class="car-card-actions">
+                            <button class="btn btn-secondary btn-sm" title="Editar">✏️ Editar</button>
+                            <button class="btn btn-danger btn-sm" title="Eliminar">🗑️ Eliminar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Coche 3 -->
+                <article class="car-card">
+                    <div class="car-card-img">
+                        <img src="img/honda_civic.png" alt="Civic Type R">
+                    </div>
+                    <div class="car-card-content">
+                        <div class="car-card-header">
+                            <h4>Civic Type R</h4>
+                            <span class="car-tag">2024</span>
+                        </div>
+                        <div class="car-info">
+                            <p><strong>Marca:</strong> Honda</p>
+                            <p><strong>Modelo:</strong> Hatchback</p>
+                            <p><strong>Precio:</strong> <span class="price">$44,795</span></p>
+                            <div class="color-info">
+                                <strong>Color:</strong>
+                                <span class="color-badge" style="background-color: #f8fafc; border: 1px solid #cbd5e1;"></span> Blanco
+                            </div>
+                            <p><strong>Origen:</strong> Japón</p>
+                        </div>
+                        <div class="car-card-actions">
+                            <button class="btn btn-secondary btn-sm" title="Editar">✏️ Editar</button>
+                            <button class="btn btn-danger btn-sm" title="Eliminar">🗑️ Eliminar</button>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
 
