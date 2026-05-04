@@ -174,39 +174,54 @@ body {
 }
 
 .car-card-content {
-    padding: 2.5rem;
-    text-align: center;
+    padding: 1.75rem 2rem;
+    text-align: left;
 }
 
 .car-card-header {
     margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 1rem;
 }
 
 .car-card-header h4 {
     font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    color: var(--text-main);
 }
 
 .car-tag {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--primary-color);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #fff;
+    background: var(--primary-gradient);
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05em;
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
 }
 
 .car-info {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
-.car-info p {
+.car-info p, .color-info {
     display: flex;
     justify-content: space-between;
-    padding: 0.75rem 0;
-    border-bottom: 1px border var(--border-color);
+    align-items: center;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--glass-border);
     font-size: 0.95rem;
     color: var(--text-muted);
+}
+
+.car-info p:last-child {
+    border-bottom: none;
 }
 
 .car-info strong {
@@ -216,7 +231,7 @@ body {
 
 .price {
     font-size: 1.25rem;
-    font-weight: 700;
+    font-weight: 800;
     color: #fff;
     background: var(--primary-gradient);
     background-clip: text;
@@ -224,20 +239,19 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.color-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.75rem 0;
-}
-
 .color-badge {
     display: inline-block;
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    margin-left: 0.5rem;
+    margin-right: 0.5rem;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    vertical-align: middle;
+}
+
+.color-value {
+    display: flex;
+    align-items: center;
 }
 
 .car-card-actions {
